@@ -1,8 +1,8 @@
 import os
 from setuptools import find_packages, setup
 
-with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
-    README = readme.read()
+# with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
+#     README = readme.read()
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
@@ -18,7 +18,7 @@ setup(
     include_package_data=True,
     license='MIT License',  # example license
     description='Fetches Pivotal Tracker Stories.',
-    long_description=README,
+    # long_description=README,
     url='https://github.com/xxihawkxx/pivotal_fetcher',
     author='Chetan Bhatt',
     author_email='ichetanbhatt@gmail.com',

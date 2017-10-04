@@ -1,11 +1,39 @@
-from setuptools import setup
+import os
+from setuptools import find_packages, setup
 
-setup(name='pivotal_fetcher',
-      version='0.1',
-      description='Fetches PivotalTracker Stories',
-      url='http://github.com/xxihawkxx/pivotal_fetcher',
-      author='Chetan Bhatt',
-      author_email='ichetanbhatt@gmail.com',
-      license='',
-      packages=[''],
-      zip_safe=False)
+with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
+    README = readme.read()
+
+# allow setup.py to be run from any path
+os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
+
+setup(
+    name='pivotal_fetcher',
+    version='2.0',
+    packages=find_packages(),
+    install_requires=[
+        'beautifultable==0.3.0',
+        'requests',
+    ],
+    include_package_data=True,
+    license='MIT License',  # example license
+    description='Fetches Pivotal Tracker Stories.',
+    long_description=README,
+    url='https://github.com/xxihawkxx/pivotal_fetcher',
+    author='Chetan Bhatt',
+    author_email='ichetanbhatt@gmail.com',
+    classifiers=[
+        # replace "X.Y" as appropriate
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',  # example license
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        # Replace these appropriately if you are stuck on Python 2.
+    ],
+    entry_points={
+            'console_scripts': [
+                'accepted=pivotal_fetcher:accepted',
+            ],
+        },
+
+)

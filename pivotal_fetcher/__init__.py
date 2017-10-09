@@ -69,4 +69,4 @@ def accepted():
                 table = "Story:[" + story + "] Type:[" + story_type + "] Created:[" + created_at + "] Owners:" + owners
                 print table
             print ""
-accepted()
+

@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='pivotal_fetcher',
-    version='5.0',
+    version='5.1.1',
     packages=find_packages(),
     install_requires=[
         'beautifultable==0.3.0',

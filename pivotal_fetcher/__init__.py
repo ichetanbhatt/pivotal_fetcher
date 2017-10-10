@@ -61,5 +61,3 @@ def accepted():
                             + created_at + "] Accepted:[" + accepted_at + "]"
                     print table
                 print ""
-
-accepted()

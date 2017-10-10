@@ -10,6 +10,6 @@ PT_APIKEY=YOUR_API_TOKEN
 PROJECT_ID={"PROJECT_NAME": PROJECT_ID}
 OWNER_ID=USER_NAME
    ```
-3. Use "pivotal_fetcher\ fetch [days]" for magic!
+3. Use "pt_fetch [days]" for magic!
 
   
